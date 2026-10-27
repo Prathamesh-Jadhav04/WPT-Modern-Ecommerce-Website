@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Multiple Products</title>
+  </head>
+  <body>
+    <!-- React CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function Product(
+      ) {
+        return (
+          <div>
+            <h2>{props.name}</h2>
+            <h3>₹{props.price}</h3>
+            <button>ADD TO CART</button>
+            <hr />
+          </div>
+        );
+      }
+
+      let Record = (
+        <div>
+          <Product name="Gulab Chai" price={40} />
+          <Product name="Masala Chai" price={30} />
+          <Product name="Sulamani Chai" price={50} />
+          <Product name="Irani chai" price={20} />
+        </div>
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      root.render(Record);
+    </script>
+  </body>
+</html>
