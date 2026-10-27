@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>React Counter</title>
+</head>
+<body>
+
+  <!-- React CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+    let Count = 1;
+
+    const root = ReactDOM.createRoot(
+      document.getElementById("root")
+    );
+
+    setInterval(() => {
+      const Record = (
+        <div>
+          <div>
+            <div>
+              <h1>Hello <span>{Count}</span></h1>
+            </div>
+          </div>
+        </div>
+      );
+
+      root.render(Record);
+      Count++;
+      ReactDOM.render(Record.document.getElementById("root"))
+    }, 1500);
+  </script>
+  Count++;
+
+</body>
+</html>
